@@ -1,0 +1,22 @@
+uuid: 8a4e6028-e793-4680-8ed3-194f7f094204
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bluex
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: bluex_content
+theme: bluex
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: dfbad05f-711a-47a7-a45e-8436b734cfdf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bluex
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: bluex_breadcrumbs
+theme: bluex
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }
