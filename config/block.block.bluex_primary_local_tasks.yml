@@ -1,0 +1,22 @@
+uuid: 574e0d61-f330-4f29-8966-62dfb6d58e2f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bluex
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: bluex_primary_local_tasks
+theme: bluex
+region: header
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

@@ -79,60 +79,53 @@
 %}
 {{ attach_library('claro/classy.node') }}
 <article{{ attributes.addClass(classes) }}>
-
   <div{{ content_attributes.addClass('node__content') }}>
+    <div class="max-w-screen-xl mx-auto">
 
-    <!-- component -->
-<div class="max-w-screen-xl mx-auto">
+      <main class="mt-10">
+        <div class="mb-4 md:mb-0 w-full max-w-screen-md mx-auto relative h-96">
+          <div class="absolute left-0 bottom-0 w-full h-full z-10"
+            style="background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.7));"></div>
+          <img src="{{ file_url(node.field_image.entity.fileuri) }}" class="absolute left-0 top-0 w-full h-full z-0 object-cover" />
 
-    <main class="mt-10">
-      <div class="mb-4 md:mb-0 w-full max-w-screen-md mx-auto relative h-96">
-        <div class="absolute left-0 bottom-0 w-full h-full z-10"
-          style="background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.7));"></div>
-        <img src="{{ file_url(node.field_image.entity.fileuri) }}" class="absolute left-0 top-0 w-full h-full z-0 object-cover" />
+          <div class="p-4 absolute bottom-0 left-0 z-20">
 
-        <div class="p-4 absolute bottom-0 left-0 z-20">
+            <p class="text-white">{{ node.field_time.value }} {{ "minutos"|t }}</p>
+            {% if content.field_tags %}
+              {% for item in content.field_tags['#items'] %}
+                {% set term = item.entity %}
+                <a href="{{ path('entity.taxonomy_term.canonical', {'taxonomy_term': term.id}) }}"
+                  class="px-4 py-1 bg-black text-gray-200 inline-flex items-center justify-center mb-2">
+                  {{ term.name.value }}
+                </a>
+              {% endfor %}
+            {% endif %}
 
-          <p class="text-white">{{ node.field_time.value }} {{ "minutos"|t }}</p>
-          {% if content.field_tags %}
-            {% for item in content.field_tags['#items'] %}
-              {% set term = item.entity %}
-              <a href="{{ path('entity.taxonomy_term.canonical', {'taxonomy_term': term.id}) }}"
-                class="px-4 py-1 bg-black text-gray-200 inline-flex items-center justify-center mb-2">
-                {{ term.name.value }}
-              </a>
-            {% endfor %}
-          {% endif %}
+            {% if node.title.value  %}
+              <h2 class="text-4xl font-semibold text-gray-100 leading-tight">
+                {{ node.title.value }}
+              </h2>
+            {% endif %}
 
-          {% if node.title.value  %}
-            <h2 class="text-4xl font-semibold text-gray-100 leading-tight">
-              {{ node.title.value }}
-            </h2>
-          {% endif %}
-
-          <div class="flex mt-3">
-            <img src="https://randomuser.me/api/portraits/men/97.jpg"
-              class="h-10 w-10 rounded-full mr-2 object-cover" />
-            <div>
-              <p class="font-semibold text-gray-200 text-sm">{{ author_name }}</p>
-              <p class="font-semibold text-gray-400 text-xs">{{ date }}</p>
+            <div class="flex mt-3">
+              <img src="https://randomuser.me/api/portraits/men/97.jpg"
+                class="h-10 w-10 rounded-full mr-2 object-cover" />
+              <div>
+                <p class="font-semibold text-gray-200 text-sm">{{ author_name }}</p>
+                <p class="font-semibold text-gray-400 text-xs">{{ date }}</p>
+              </div>
             </div>
+
           </div>
         </div>
-      </div>
 
-      {% if node.body.value %}
-        <div class="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed">
-          {{ node.body.value|raw}}
-        </div>
-      {% endif %}
-    </main>
-    <!-- main ends here -->
+        {% if node.body.value %}
+          <div class="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed">
+            {{ node.body.value|raw}}
+          </div>
+        {% endif %}
+      </main>
 
+    </div>
   </div>
-
-
-
-  </div>
-
 </article>

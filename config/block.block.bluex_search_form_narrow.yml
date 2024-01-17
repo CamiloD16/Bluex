@@ -1,0 +1,23 @@
+uuid: 878cdfab-1ad3-4ca4-b43b-04cedf064105
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - bluex
+_core:
+  default_config_hash: yEBET0cqDbk8dkWzaJw-8CKft0961VBflsISoSR6Lj8
+id: bluex_search_form_narrow
+theme: bluex
+region: primary_menu
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }
