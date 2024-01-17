@@ -1,0 +1,8 @@
+# Main theme library.
+articles:
+  js:
+    js/bluex.js: {}
+  css:
+    theme:
+      css/styles.css: {}
+      css/tailwind.css: {}
