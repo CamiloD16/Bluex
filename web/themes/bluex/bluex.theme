@@ -1,5 +1,8 @@
 <?php declare(strict_types = 1);
 
+use Drupal\file\Entity\File;
+use Drupal\Core\Url;
+
 /**
  * @file
  * Functions to support theming in the bluex theme.
@@ -23,5 +26,43 @@ function bluex_preprocess_page(array &$variables): void {
  * Implements hook_preprocess_HOOK() for node.html.twig.
  */
 function bluex_preprocess_node(array &$variables): void {
+  if ($author = $variables['node']->getOwner()) {
+    $user_picture_field = $author->get('user_picture');
 
+    if (!$user_picture_field->isEmpty()) {
+
+      $user_picture_item = $user_picture_field->first();
+      $file_entity = $user_picture_item->entity;
+
+      if ($file_entity) {
+        // Get the URL of the file.
+        $file_url_generator = \Drupal::service('file_url_generator');
+        $author_picture_url = $file_url_generator->generateAbsoluteString($file_entity->getFileUri());
+
+        $variables['author_picture_url'] = $author_picture_url;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function bluex_preprocess_paragraph(array &$variables): void {
+  // $image_item = $variables['paragraph']->get('field_image')->first();
+  if ($variables['paragraph']->getType() == 'hero') {
+    if (!empty($variables['paragraph']->field_image->entity)) {
+      $image_uri = $variables['paragraph']->field_image->entity->getFileUri();
+
+      // Obtiene la URL completa de la imagen.
+      $image_url = \Drupal::service('file_url_generator')->generateAbsoluteString($image_uri);
+
+      // Obtiene el texto alternativo (Alt) configurado para la imagen.
+      $alt_text = $variables['paragraph']->field_image->alt;
+
+      // Agrega las variables al tema para que estén disponibles en la plantilla Twig.
+      $variables['image_url'] = $image_url;
+      $variables['alt_text'] = $alt_text;
+    }
+  }
 }
