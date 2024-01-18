@@ -4,5 +4,6 @@ articles:
     js/bluex.js: {}
   css:
     theme:
+      css/globals.css: {}
       css/styles.css: {}
       css/tailwind.css: {}

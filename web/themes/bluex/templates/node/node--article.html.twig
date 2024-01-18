@@ -67,6 +67,9 @@
  *
  */
 #}
+
+{{ attach_library('claro/classy.node') }}
+
 {%
   set classes = [
     'node',
@@ -77,7 +80,13 @@
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
-{{ attach_library('claro/classy.node') }}
+
+{% if author_picture_url %}
+  {% set author_picture = author_picture_url %}
+{% else %}
+  {% set author_picture = "https://img.freepik.com/foto-gratis/aislado-feliz-sonriente-perro-fondo-blanco-retrato-4_1562-693.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699574400&semt=ais" %}
+{% endif %}
+
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass('node__content') }}>
     <div class="max-w-screen-xl mx-auto">
@@ -108,7 +117,7 @@
             {% endif %}
 
             <div class="flex mt-3">
-              <img src="https://randomuser.me/api/portraits/men/97.jpg"
+              <img src="{{ author_picture }}"
                 class="h-10 w-10 rounded-full mr-2 object-cover" />
               <div>
                 <p class="font-semibold text-gray-200 text-sm">{{ author_name }}</p>
