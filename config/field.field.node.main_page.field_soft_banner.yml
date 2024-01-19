@@ -25,6 +25,12 @@ settings:
       soft_banner: soft_banner
     negate: 0
     target_bundles_drag_drop:
+      cards_title_description:
+        weight: 5
+        enabled: false
+      endorsement:
+        weight: 6
+        enabled: false
       hero:
         weight: 3
         enabled: false

@@ -1,0 +1,23 @@
+uuid: 641853a3-376c-462c-b80b-26f7d0aedf92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button
+    - paragraphs.paragraphs_type.endorsement
+  module:
+    - link
+id: paragraph.endorsement.field_button
+field_name: field_button
+entity_type: paragraph
+bundle: endorsement
+label: Button
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

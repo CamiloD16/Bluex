@@ -1,0 +1,19 @@
+uuid: 6d9ca829-e0de-4f58-99b9-07adf6993df9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.endorsement
+id: paragraph.endorsement.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: endorsement
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

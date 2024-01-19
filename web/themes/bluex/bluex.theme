@@ -46,23 +46,68 @@ function bluex_preprocess_node(array &$variables): void {
 }
 
 /**
+ * Helper function to set background and text colors based on field value.
+ *
+ * @param \Drupal\paragraphs\Entity\Paragraph $paragraph
+ *   The paragraph entity.
+ * @param string $field_name
+ *   The name of the field to evaluate.
+ * @return array
+ *   An array containing background and text colors.
+ */
+function setBackgroundColor($paragraph, $field_name) {
+  $background_value = $paragraph->{$field_name}->value;
+  return $background_value == 1 ? ['bg-gray-900', 'text-white'] : ['bg-white', 'text-black'];
+}
+
+/**
  * Implements hook_preprocess_paragraph().
  */
 function bluex_preprocess_paragraph(array &$variables): void {
-  // $image_item = $variables['paragraph']->get('field_image')->first();
-  if ($variables['paragraph']->getType() == 'hero') {
-    if (!empty($variables['paragraph']->field_image->entity)) {
-      $image_uri = $variables['paragraph']->field_image->entity->getFileUri();
 
-      // Obtiene la URL completa de la imagen.
+  $paragraph = $variables['paragraph'];
+
+  if ($paragraph->getType() == 'hero') {
+
+    // Get the image url and the alt text.
+    if (!empty($paragraph->field_image->entity)) {
+      $image_uri = $paragraph->field_image->entity->getFileUri();
       $image_url = \Drupal::service('file_url_generator')->generateAbsoluteString($image_uri);
-
-      // Obtiene el texto alternativo (Alt) configurado para la imagen.
-      $alt_text = $variables['paragraph']->field_image->alt;
-
-      // Agrega las variables al tema para que estén disponibles en la plantilla Twig.
+      $alt_text = $paragraph->field_image->alt;
       $variables['image_url'] = $image_url;
       $variables['alt_text'] = $alt_text;
     }
+
+    // Change the background color.
+    $background_color = setBackgroundColor($paragraph, 'field_background_color');
+    $variables['background_color'] = $background_color[0];
+    $variables['text_color'] = $background_color[1];
+
+    // Change the position image.
+    $position_image_value = $paragraph->field_controller_position->value;
+    $variables['image_position'] = $position_image_value;
+  }
+
+  if ($paragraph->getType() == 'cards_title_description') {
+    // Change the background color.
+    $background_value = $paragraph->getParentEntity()->field_cards_background_color->value;
+    $background_color = ($background_value == 1) ? ['bg-gray-900', 'text-white'] : ['bg-white', 'text-black'];
+
+    $variables['background_color'] = $background_color[0];
+    $variables['text_color'] = $background_color[1];
+  }
+
+  if ($paragraph->getType() == 'endorsement') {
+    // Change the background color.
+    $background_color = setBackgroundColor($paragraph, 'field_background_color');
+    $variables['background_color'] = $background_color[0];
+    $variables['text_color'] = $background_color[1];
+  }
+
+  if ($paragraph->getType() == 'soft_banner') {
+    // Change the background color.
+    $background_color = setBackgroundColor($paragraph, 'field_background_color');
+    $variables['background_color'] = $background_color[0];
+    $variables['text_color'] = $background_color[1];
   }
 }

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.main_page.field_endorsement
     - field.field.node.main_page.field_hero
     - field.field.node.main_page.field_soft_banner
     - node.type.main_page
@@ -20,5 +21,6 @@ content:
     weight: 100
     region: content
 hidden:
+  field_endorsement: true
   field_hero: true
   field_soft_banner: true
