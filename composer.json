@@ -25,7 +25,8 @@
         "drupal/paragraphs": "^1.17",
         "drupal/devel": "^5.0",
         "drupal/twig_tweak": "^3.2",
-        "drupal/maxlength": "^2.1"
+        "drupal/maxlength": "^2.1",
+        "drupal/field_group": "^3.4"
     },
     "require-dev": {
         "drupal/core-dev": "^10"

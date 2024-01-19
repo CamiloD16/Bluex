@@ -1,0 +1,34 @@
+uuid: 91ce3d44-a556-461a-8c06-16ccea840149
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_soft_banner
+    - node.type.main_page
+    - paragraphs.paragraphs_type.soft_banner
+  module:
+    - entity_reference_revisions
+id: node.main_page.field_soft_banner
+field_name: field_soft_banner
+entity_type: node
+bundle: main_page
+label: 'Soft banner'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      soft_banner: soft_banner
+    negate: 0
+    target_bundles_drag_drop:
+      hero:
+        weight: 3
+        enabled: false
+      soft_banner:
+        weight: 4
+        enabled: true
+field_type: entity_reference_revisions

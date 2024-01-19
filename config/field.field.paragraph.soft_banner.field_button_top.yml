@@ -1,0 +1,23 @@
+uuid: eb09b1c4-3859-4495-a3b7-5036b738bf70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_top
+    - paragraphs.paragraphs_type.soft_banner
+  module:
+    - link
+id: paragraph.soft_banner.field_button_top
+field_name: field_button_top
+entity_type: paragraph
+bundle: soft_banner
+label: 'Button top'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link
