@@ -1,0 +1,23 @@
+uuid: 8e47f190-ea0d-4212-9c00-471137238b18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_controller_position
+    - paragraphs.paragraphs_type.hero
+id: paragraph.hero.field_controller_position
+field_name: field_controller_position
+entity_type: paragraph
+bundle: hero
+label: 'Controller position'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Image on right'
+  off_label: 'Image on left'
+field_type: boolean

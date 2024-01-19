@@ -1,0 +1,19 @@
+uuid: fc59da9e-3ff1-478a-83bc-fc4217c50ccc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.soft_banner
+id: paragraph.soft_banner.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: soft_banner
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

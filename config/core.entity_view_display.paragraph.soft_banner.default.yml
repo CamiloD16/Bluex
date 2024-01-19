@@ -1,0 +1,82 @@
+uuid: c09215a5-57ba-476f-8238-84c306c3dd33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.soft_banner.field_background_color
+    - field.field.paragraph.soft_banner.field_button_left
+    - field.field.paragraph.soft_banner.field_button_right
+    - field.field.paragraph.soft_banner.field_button_top
+    - field.field.paragraph.soft_banner.field_description
+    - field.field.paragraph.soft_banner.field_title
+    - paragraphs.paragraphs_type.soft_banner
+  module:
+    - link
+    - text
+id: paragraph.soft_banner.default
+targetEntityType: paragraph
+bundle: soft_banner
+mode: default
+content:
+  field_background_color:
+    type: boolean
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_button_left:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: _blank
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_button_right:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: _blank
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_button_top:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

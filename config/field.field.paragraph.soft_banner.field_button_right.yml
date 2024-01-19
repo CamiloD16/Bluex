@@ -1,0 +1,23 @@
+uuid: 82a19cc5-a8b7-4e7e-ad01-16ee0fffb2b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_right
+    - paragraphs.paragraphs_type.soft_banner
+  module:
+    - link
+id: paragraph.soft_banner.field_button_right
+field_name: field_button_right
+entity_type: paragraph
+bundle: soft_banner
+label: 'Button right'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

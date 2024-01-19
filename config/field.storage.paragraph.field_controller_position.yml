@@ -1,0 +1,18 @@
+uuid: cabaa506-23b9-41c4-8b71-34d50a4714d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_controller_position
+field_name: field_controller_position
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
