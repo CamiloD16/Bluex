@@ -1,18 +1,18 @@
-uuid: 2ac8a555-8490-4866-b65d-84ee4b5716fe
+uuid: 9e4fec0b-3e90-4739-b1be-61b8b1d4b9d5
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_hero
+    - field.storage.node.field_endorsement
     - node.type.main_page
-    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.endorsement
   module:
     - entity_reference_revisions
-id: node.main_page.field_hero
-field_name: field_hero
+id: node.main_page.field_endorsement
+field_name: field_endorsement
 entity_type: node
 bundle: main_page
-label: Hero
+label: Endorsement
 description: ''
 required: false
 translatable: false
@@ -22,7 +22,7 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      hero: hero
+      endorsement: endorsement
     negate: 0
     target_bundles_drag_drop:
       cards_title_description:
@@ -30,11 +30,11 @@ settings:
         enabled: false
       endorsement:
         weight: 6
-        enabled: false
-      hero:
-        weight: 2
         enabled: true
+      hero:
+        weight: 7
+        enabled: false
       soft_banner:
-        weight: 4
+        weight: 8
         enabled: false
 field_type: entity_reference_revisions

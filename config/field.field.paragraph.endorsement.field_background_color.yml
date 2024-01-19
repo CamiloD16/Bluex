@@ -1,23 +1,23 @@
-uuid: 87091776-165e-4499-b667-444220bea43e
+uuid: 44eeb352-7f29-468e-bbe6-f2cab9ccd1a6
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_background_color
-    - paragraphs.paragraphs_type.soft_banner
-id: paragraph.soft_banner.field_background_color
+    - paragraphs.paragraphs_type.endorsement
+id: paragraph.endorsement.field_background_color
 field_name: field_background_color
 entity_type: paragraph
-bundle: soft_banner
+bundle: endorsement
 label: 'Background color'
 description: ''
 required: true
 translatable: false
 default_value:
   -
-    value: 1
+    value: 0
 default_value_callback: ''
 settings:
-  on_label: Dark
+  on_label: Black
   off_label: White
 field_type: boolean

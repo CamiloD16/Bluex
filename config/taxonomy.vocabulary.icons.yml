@@ -1,0 +1,8 @@
+uuid: bf83c9fe-5e03-4fdb-8523-86973304cbf5
+langcode: en
+status: true
+dependencies: {  }
+name: Icons
+vid: icons
+description: 'Taxonomy to create icons'
+weight: 0

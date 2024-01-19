@@ -1,4 +1,4 @@
-uuid: 52bf7071-6d1e-4a8f-8c9d-64cb5754a05f
+uuid: 6f00b119-627e-4179-8ea8-1c5ca82c52a8
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - entity_reference_revisions
     - node
     - paragraphs
-id: node.field_hero
-field_name: field_hero
+id: node.field_endorsement
+field_name: field_endorsement
 entity_type: node
 type: entity_reference_revisions
 settings:

@@ -1,0 +1,21 @@
+uuid: ad4d8318-70db-4abd-815c-9cc74bc5cb0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cards_background_color
+    - paragraphs.paragraphs_type.endorsement
+id: paragraph.endorsement.field_cards_background_color
+field_name: field_cards_background_color
+entity_type: paragraph
+bundle: endorsement
+label: 'Cards background color'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Black
+  off_label: White
+field_type: boolean

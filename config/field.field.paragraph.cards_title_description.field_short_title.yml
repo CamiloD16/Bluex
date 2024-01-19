@@ -1,0 +1,19 @@
+uuid: 17467261-bfcf-4485-9f34-181b6d228498
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_short_title
+    - paragraphs.paragraphs_type.cards_title_description
+id: paragraph.cards_title_description.field_short_title
+field_name: field_short_title
+entity_type: paragraph
+bundle: cards_title_description
+label: 'Short title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

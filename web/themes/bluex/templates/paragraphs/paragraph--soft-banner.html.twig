@@ -46,23 +46,11 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
-{% set bg_white = content.field_background_color['#items'].value == 0 %}
-
-{% set color_mode = bg_white
-  ? "text-black"
-  : "text-white"
-%}
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-
-      {% if bg_white %}
-      <section class="bg-white">
-      {% else %}
-      <section class="bg-gray-900">
-      {% endif %}
-
+      <section class="{{ background_color }}">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
 
           {% if content.field_button_top|render %}
@@ -76,7 +64,7 @@
           {% endif %}
 
           {% if content.field_title %}
-            <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6x {{ color_mode }}">
+            <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6x {{ text_color }}">
               {{ content.field_title }}
             </h2>
           {% endif %}
@@ -85,7 +73,7 @@
             {{ content.field_description }}
           {% endif %}
 
-          {% if if content.field_button_left|render or content.field_button_right|render %}
+          {% if content.field_button_left|render or content.field_button_right|render %}
             <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
               {% if content.field_button_left|render %}
                 <div class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300">
@@ -95,7 +83,7 @@
               {% endif %}
 
               {% if content.field_button_right|render %}
-                <div href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center rounded-lg border border-gray-800 {{ color_mode }}">
+                <div href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center rounded-lg border border-gray-800 {{ text_color }}">
                   <svg style="color: rgb(30 64 175);"class="mr-2 -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
                   </svg>
@@ -106,6 +94,7 @@
           {% endif %}
 
         </div>
+      </section>
     {% endblock %}
   </div>
 {% endblock paragraph %}

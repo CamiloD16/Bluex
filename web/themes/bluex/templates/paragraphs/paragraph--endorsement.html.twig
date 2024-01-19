@@ -47,53 +47,26 @@
   ]
 %}
 
-{# {% set image_left = content.field_controller_position['#items'].value == 0 %}
-{% set image_right = not image_left %} #}
-
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
+      <section class="text-gray-600 body-font {{ background_color }}">
+        <div class="container px-5 py-24 mx-auto">
 
-      <section class="{{ background_color }}">
-        <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-
-          {% if image_position == 0 %}
-            <div class="hidden mr-8 lg:mt-0 lg:col-span-5 lg:flex">
-              <img class="h-96 w-full" src="{{ image_url }}" alt={{ alt_text }}>
+          <div class="flex flex-wrap w-full flex-col items-center mx-auto max-w-screen-xl text-center lg:px-12">
+            <h2 class="sm:text-3xl text-4xl font-extrabold md:text-5xl lg:text-6x title-font mb-2 {{ text_color }}">{{ content.field_title }}</h2>
+            <div class="mb-8 text-lg font-normal lg:text-xl text-gray-500">
+            {{ content.field_description }}
             </div>
-          {% endif %}
-
-          <div class="mr-auto px-4 sm:pr-7 place-self-center lg:col-span-7">
-
-            {% if content.field_title  %}
-              <h2 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl {{ text_color }}">
-                {{ content.field_title }}
-              </h2>
-            {% endif %}
-
-            {% if content.field_description %}
-              {{ content.field_description }}
-            {% endif %}
-
-            {% if content.field_button_left|render %}
-              <div class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300">
-                {{ content.field_button_left }}
-                <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-              </div>
-            {% endif %}
-
-            {% if content.field_button_right|render %}
-              <div class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center focus:ring-4 border-2 border-zinc-600 rounded-lg {{ text_color }}">
-                {{ content.field_button_right }}
-              </div>
-            {% endif %}
           </div>
 
-          {% if image_position == 1 %}
-            <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-              <img class="h-96 w-full" src="{{ image_url }}" alt={{ alt_text }}>
-            </div>
-          {% endif %}
+          <div class="flex flex-wrap -m-4">
+            {{ content.field_card }}
+          </div>
+
+          <button class="flex mx-auto mt-16 text-white bg-blue-700  border-0 py-2 px-8 focus:outline-none hover:bg-blue-800 rounded text-lg">
+            {{ content.field_button }}
+          </button>
 
         </div>
       </section>

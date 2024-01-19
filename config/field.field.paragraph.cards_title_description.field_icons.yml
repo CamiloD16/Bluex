@@ -1,0 +1,29 @@
+uuid: 3c36519e-523d-491a-96a6-689d171805e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icons
+    - paragraphs.paragraphs_type.cards_title_description
+    - taxonomy.vocabulary.icons
+id: paragraph.cards_title_description.field_icons
+field_name: field_icons
+entity_type: paragraph
+bundle: cards_title_description
+label: Icons
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      icons: icons
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

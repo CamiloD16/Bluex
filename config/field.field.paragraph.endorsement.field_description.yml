@@ -1,0 +1,22 @@
+uuid: 071981d2-e311-4f56-9e79-538f0ac2205a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.endorsement
+  module:
+    - text
+id: paragraph.endorsement.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: endorsement
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long
