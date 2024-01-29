@@ -9,6 +9,7 @@ dependencies:
     - node.type.main_page
   module:
     - paragraphs
+    - path
 id: node.main_page.default
 targetEntityType: node
 bundle: main_page
@@ -16,7 +17,7 @@ mode: default
 content:
   field_endorsement:
     type: paragraphs
-    weight: 26
+    weight: 2
     region: content
     settings:
       title: Paragraph
@@ -56,7 +57,7 @@ content:
     third_party_settings: {  }
   field_soft_banner:
     type: paragraphs
-    weight: 2
+    weight: 3
     region: content
     settings:
       title: Paragraph
@@ -74,6 +75,12 @@ content:
         convert: '0'
         duplicate: duplicate
     third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   title:
     type: string_textfield
     weight: 0
@@ -84,7 +91,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  path: true
   promote: true
   status: true
   sticky: true

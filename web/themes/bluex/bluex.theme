@@ -111,3 +111,11 @@ function bluex_preprocess_paragraph(array &$variables): void {
     $variables['text_color'] = $background_color[1];
   }
 }
+
+/**
+ * Implements template_preprocess_block__system_menu_block().
+ */
+function bluex_preprocess_block__system_menu_block(&$variables) {
+  // Obtener el nombre del sitio y pasarlo a la plantilla.
+  $variables['site_name'] = \Drupal::config('system.site')->get('name');
+}

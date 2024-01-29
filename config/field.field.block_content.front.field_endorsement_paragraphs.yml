@@ -1,0 +1,40 @@
+uuid: 1f483920-b5b3-4398-ba4a-12ad644b8811
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.front
+    - field.storage.block_content.field_endorsement_paragraphs
+    - paragraphs.paragraphs_type.endorsement
+  module:
+    - entity_reference_revisions
+id: block_content.front.field_endorsement_paragraphs
+field_name: field_endorsement_paragraphs
+entity_type: block_content
+bundle: front
+label: 'Endorsement paragraphs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      endorsement: endorsement
+    negate: 0
+    target_bundles_drag_drop:
+      cards_title_description:
+        weight: 5
+        enabled: false
+      endorsement:
+        weight: 6
+        enabled: true
+      hero:
+        weight: 7
+        enabled: false
+      soft_banner:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

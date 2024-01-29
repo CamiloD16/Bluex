@@ -1,0 +1,20 @@
+uuid: 0432b27a-9c09-40f1-8be5-64e56f1656b0
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - bluex
+id: bluex_breadcrumbs_2
+theme: bluex
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }
