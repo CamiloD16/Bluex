@@ -1,6 +1,6 @@
 uuid: 4694b113-d4d6-4630-85d9-4d76600b50cd
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.main
@@ -12,8 +12,8 @@ _core:
   default_config_hash: KWAiziL39uEzmOJEql_wbUP2RtqGceL3WM2CfxhMelE
 id: bluex_main_menu
 theme: bluex
-region: primary_menu
-weight: 0
+region: header
+weight: 3
 provider: null
 plugin: 'system_menu_block:main'
 settings:

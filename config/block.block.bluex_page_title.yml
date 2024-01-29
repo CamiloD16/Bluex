@@ -9,7 +9,7 @@ _core:
 id: bluex_page_title
 theme: bluex
 region: header
-weight: -5
+weight: -3
 provider: null
 plugin: page_title_block
 settings:

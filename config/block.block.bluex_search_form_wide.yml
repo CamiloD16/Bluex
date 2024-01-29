@@ -1,6 +1,6 @@
 uuid: d9404571-fd9a-458d-899a-e0e0cf833e39
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - search
@@ -10,8 +10,8 @@ _core:
   default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
 id: bluex_search_form_wide
 theme: bluex
-region: secondary_menu
-weight: -5
+region: header
+weight: -2
 provider: null
 plugin: search_form_block
 settings:

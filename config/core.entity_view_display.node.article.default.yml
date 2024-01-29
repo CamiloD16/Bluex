@@ -25,7 +25,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_image:
     type: image_url
@@ -33,7 +33,7 @@ content:
     settings:
       image_style: wide
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_short_description:
     type: basic_string
@@ -48,7 +48,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_time:
     type: number_integer
@@ -57,11 +57,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 4
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
     weight: 5
     region: content
-hidden: {  }
+hidden:
+  links: true

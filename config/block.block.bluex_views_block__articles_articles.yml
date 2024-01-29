@@ -1,0 +1,29 @@
+uuid: 96e309f1-c74f-411c-beff-2dd3c75f7e28
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.articles
+  module:
+    - system
+    - views
+  theme:
+    - bluex
+id: bluex_views_block__articles_articles
+theme: bluex
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:articles-articles'
+settings:
+  id: 'views_block:articles-articles'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: '6'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
