@@ -46,42 +46,13 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
-
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      <section class="body-font {{ background_color }}">
-        <div class="container px-5 py-24 mx-auto">
-
-          {% if content.field_title or content.field_description %}
-            <div class="flex flex-wrap w-full flex-col items-center mx-auto max-w-screen-xl text-center lg:px-12">
-              {% if content.field_title %}
-                <h2 class="text-4xl font-extrabold md:text-5xl xl:text-6xl tracking-tight leading-none title-font mb-2 {{ text_color }}">
-                  {{ content.field_title }}
-                </h2>
-              {% endif %}
-              {% if content.field_description %}
-                <div class="mb-8 text-lg font-normal lg:text-xl text-gray-600">
-                  {{ content.field_description }}
-                </div>
-              {% endif %}
-            </div>
-          {% endif %}
-
-          {% if content.field_card|render %}
-            <div class="flex flex-wrap -m-4">
-              {{ content.field_card }}
-            </div>
-          {% endif %}
-
-          {% if content.field_button|render %}
-            <button class="flex mx-auto mt-16 text-white bg-blue-700  border-0 py-2 px-8 focus:outline-none hover:bg-blue-800 rounded text-lg">
-              {{ content.field_button }}
-            </button>
-          {% endif %}
-
-        </div>
-      </section>
+      <div style="height:35rem;">
+        <img style="min-height:35rem;" class="w-full" src="{{ image_url }}"  alt="{{ alt_text }}">
+      </div>
     {% endblock %}
   </div>
+
 {% endblock paragraph %}

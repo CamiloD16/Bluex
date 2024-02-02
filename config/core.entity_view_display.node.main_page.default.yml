@@ -3,44 +3,103 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.main_page.field_endorsement
-    - field.field.node.main_page.field_hero
-    - field.field.node.main_page.field_soft_banner
+    - field.field.node.main_page.field_all_paragraphs
     - node.type.main_page
+    - views.view.articles
+  content:
+    - 'block_content:carousel:d2b5ea28-1ac8-4ffd-aa73-5ebee5163ea1'
   module:
+    - block_content
     - entity_reference_revisions
+    - layout_builder
+    - layout_discovery
     - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Section 01'
+          context_mapping: {  }
+        components:
+          adc75d22-0cdc-41ba-8bfb-2bc3de0e48c9:
+            uuid: adc75d22-0cdc-41ba-8bfb-2bc3de0e48c9
+            region: content
+            configuration:
+              id: 'block_content:d2b5ea28-1ac8-4ffd-aa73-5ebee5163ea1'
+              label: Carousel
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+          6634078c-76f7-4d88-b657-9a6b31a63029:
+            uuid: 6634078c-76f7-4d88-b657-9a6b31a63029
+            region: content
+            configuration:
+              id: 'field_block:node:main_page:field_all_paragraphs'
+              label: 'All paragraphs'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Section 02'
+          context_mapping: {  }
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Section 03'
+          context_mapping: {  }
+        components:
+          106ef6b8-6533-4ea9-ab3c-dedd1ee1443a:
+            uuid: 106ef6b8-6533-4ea9-ab3c-dedd1ee1443a
+            region: content
+            configuration:
+              id: 'views_block:articles-articles'
+              label: 'Explore our popular lessons'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Explore our popular lessons'
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 id: node.main_page.default
 targetEntityType: node
 bundle: main_page
 mode: default
 content:
-  field_endorsement:
+  field_all_paragraphs:
     type: entity_reference_revisions_entity_view
-    label: hidden
+    label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 1
-    region: content
-  field_hero:
-    type: entity_reference_revisions_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 0
-    region: content
-  field_soft_banner:
-    type: entity_reference_revisions_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
 hidden:
   links: true

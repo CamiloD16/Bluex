@@ -1,21 +1,20 @@
-uuid: d67be950-c303-4cff-89a5-1d1b064428fc
+uuid: 6632cdc0-995e-4d2c-a7c5-5f3e5da85317
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.main_page.field_all_paragraphs
-    - node.type.main_page
+    - block_content.type.carousel
+    - field.field.block_content.carousel.field_carousel_images
   module:
     - paragraphs
-    - path
-id: node.main_page.default
-targetEntityType: node
-bundle: main_page
+id: block_content.carousel.default
+targetEntityType: block_content
+bundle: carousel
 mode: default
 content:
-  field_all_paragraphs:
+  field_carousel_images:
     type: paragraphs
-    weight: 26
+    weight: 27
     region: content
     settings:
       title: Paragraph
@@ -31,29 +30,12 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-  path:
-    type: path
-    weight: 4
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    weight: 5
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  title:
+  info:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  created: true
-  status: true
-  sticky: true
-  uid: true
+hidden: {  }

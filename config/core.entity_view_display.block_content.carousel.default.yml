@@ -1,0 +1,39 @@
+uuid: d0d855b5-8800-4592-a03c-c8495f7ef440
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.carousel
+    - field.field.block_content.carousel.field_carousel_images
+  module:
+    - slick_paragraphs
+id: block_content.carousel.default
+targetEntityType: block_content
+bundle: carousel
+mode: default
+content:
+  field_carousel_images:
+    type: slick_paragraphs_vanilla
+    label: hidden
+    settings:
+      optionset: default
+      view_mode: preview
+      cache: 0
+      use_theme_field: false
+      skin: ''
+      overridables:
+        arrows: arrows
+        autoplay: autoplay
+        infinite: infinite
+        dots: '0'
+        draggable: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      override: true
+      skin_arrows: ''
+      skin_dots: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }
