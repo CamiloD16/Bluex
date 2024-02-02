@@ -8,11 +8,10 @@ dependencies:
     - field.field.paragraph.hero.field_button_right
     - field.field.paragraph.hero.field_controller_position
     - field.field.paragraph.hero.field_description
-    - field.field.paragraph.hero.field_image
+    - field.field.paragraph.hero.field_image_media
     - field.field.paragraph.hero.field_title
     - paragraphs.paragraphs_type.hero
   module:
-    - image
     - link
     - text
 id: paragraph.hero.default
@@ -28,7 +27,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   field_button_left:
     type: link
@@ -40,7 +39,7 @@ content:
       rel: '0'
       target: _blank
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_button_right:
     type: link
@@ -52,7 +51,7 @@ content:
       rel: '0'
       target: _blank
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_controller_position:
     type: boolean
@@ -62,7 +61,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_description:
     type: text_default
@@ -71,11 +70,12 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_image:
-    type: image_url
+  field_image_media:
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_style: wide
+      view_mode: full
+      link: false
     third_party_settings: {  }
     weight: 2
     region: content

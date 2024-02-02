@@ -38,7 +38,7 @@
     {% endif %}
     <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
       {% for item in items %}
-        <li class="text-gray-500 dark:text-gray-400 font-medium">
+        <li class="text-gray-600 dark:text-gray-400 font-medium">
           {{ link(item.title, item.url) }}
           {% if item.below %}
             {{ menus.menu_links(item.below, attributes, menu_level + 1) }}

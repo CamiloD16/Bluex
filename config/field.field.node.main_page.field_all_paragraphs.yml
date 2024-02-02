@@ -1,18 +1,18 @@
-uuid: 48348125-5919-4d1a-b8b4-a042793b2dad
+uuid: 13a29aa8-9b66-43e8-8885-4cc8e96be388
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.front
-    - field.storage.block_content.field_hero_paragraphs
-    - paragraphs.paragraphs_type.hero
+    - field.storage.node.field_all_paragraphs
+    - node.type.main_page
+    - paragraphs.paragraphs_type.mixture_paragraphs
   module:
     - entity_reference_revisions
-id: block_content.front.field_hero_paragraphs
-field_name: field_hero_paragraphs
-entity_type: block_content
-bundle: front
-label: 'Hero paragraphs'
+id: node.main_page.field_all_paragraphs
+field_name: field_all_paragraphs
+entity_type: node
+bundle: main_page
+label: 'All paragraphs'
 description: ''
 required: false
 translatable: false
@@ -22,19 +22,25 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      hero: hero
+      mixture_paragraphs: mixture_paragraphs
     negate: 0
     target_bundles_drag_drop:
       cards_title_description:
-        weight: 5
+        weight: 8
+        enabled: false
+      carousel:
+        weight: 9
         enabled: false
       endorsement:
-        weight: 6
+        weight: 10
         enabled: false
       hero:
+        weight: 11
+        enabled: false
+      mixture_paragraphs:
         weight: 7
         enabled: true
       soft_banner:
-        weight: 8
+        weight: 12
         enabled: false
 field_type: entity_reference_revisions

@@ -1,8 +1,0 @@
-uuid: 923a4ead-2632-418f-95e9-bd90acd9ae2a
-langcode: en
-status: true
-dependencies: {  }
-id: front
-label: Front
-revision: 0
-description: 'Front has all the paragraphs to the landing section'

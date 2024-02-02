@@ -1,0 +1,24 @@
+uuid: cccaf08f-232f-4f8d-85e0-ad703cd7e0dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.mixture_paragraphs.field_all_paragraphs
+    - paragraphs.paragraphs_type.mixture_paragraphs
+  module:
+    - entity_reference_revisions
+id: paragraph.mixture_paragraphs.default
+targetEntityType: paragraph
+bundle: mixture_paragraphs
+mode: default
+content:
+  field_all_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

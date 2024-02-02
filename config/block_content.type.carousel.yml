@@ -1,0 +1,8 @@
+uuid: dddb946f-df61-4afd-8214-8b390680feca
+langcode: en
+status: true
+dependencies: {  }
+id: carousel
+label: Carousel
+revision: 0
+description: 'It has a classic Carousel with only images'

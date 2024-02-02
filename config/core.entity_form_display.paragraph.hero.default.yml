@@ -8,15 +8,14 @@ dependencies:
     - field.field.paragraph.hero.field_button_right
     - field.field.paragraph.hero.field_controller_position
     - field.field.paragraph.hero.field_description
-    - field.field.paragraph.hero.field_image
+    - field.field.paragraph.hero.field_image_media
     - field.field.paragraph.hero.field_title
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.hero
   module:
     - field_group
-    - image
     - link
     - maxlength
+    - media_library
     - text
 third_party_settings:
   field_group:
@@ -42,6 +41,7 @@ third_party_settings:
       children:
         - field_title
         - field_description
+        - field_image_media
         - field_image
       label: Content
       region: content
@@ -140,13 +140,12 @@ content:
         maxlength_js: 255
         maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
         maxlength_js_enforce: true
-  field_image:
-    type: image_image
+  field_image_media:
+    type: media_library_widget
     weight: 4
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
   field_title:
     type: string_textfield

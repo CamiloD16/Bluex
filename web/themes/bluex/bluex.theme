@@ -2,6 +2,10 @@
 
 use Drupal\file\Entity\File;
 use Drupal\Core\Url;
+use Drupal\media\Entity\Media;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\media_entity\MediaInterface;
+use Drupal\node\Entity\Node;
 
 /**
  * @file
@@ -69,11 +73,13 @@ function bluex_preprocess_paragraph(array &$variables): void {
 
   if ($paragraph->getType() == 'hero') {
 
-    // Get the image url and the alt text.
-    if (!empty($paragraph->field_image->entity)) {
-      $image_uri = $paragraph->field_image->entity->getFileUri();
+    // Get the image url and alt text.
+    if (!empty($paragraph->field_image_media->entity)) {
+      $image_uri = $paragraph->field_image_media->entity->field_media_image->entity->getFileUri();
       $image_url = \Drupal::service('file_url_generator')->generateAbsoluteString($image_uri);
-      $alt_text = $paragraph->field_image->alt;
+
+      $alt_text = $paragraph->field_image_media->entity->field_media_image->alt;
+
       $variables['image_url'] = $image_url;
       $variables['alt_text'] = $alt_text;
     }
@@ -110,12 +116,32 @@ function bluex_preprocess_paragraph(array &$variables): void {
     $variables['background_color'] = $background_color[0];
     $variables['text_color'] = $background_color[1];
   }
+
+  if ($paragraph->getType() == 'carousel') {
+    // Get the image URL and the alt text.
+    if (!empty($paragraph->field_image_media->entity)) {
+      // Reemplaza 'field_media_image' con el nombre de tu campo de imagen en la entidad de medios.
+      $image_entity = $paragraph->field_image_media->entity->get('field_media_image')->entity;
+
+      // Verifica si hay una imagen asociada.
+      if ($image_entity) {
+        // Obtiene el servicio 'file_url_generator'.
+        $file_url_generator = \Drupal::service('file_url_generator');
+
+        // Obtiene la URL de la imagen.
+        $image_url = $file_url_generator->generateAbsoluteString($image_entity->getFileUri());
+        $alt_text = $paragraph->field_image_media->alt;
+        $variables['image_url'] = $image_url;
+        $variables['alt_text'] = $alt_text;
+      }
+    }
+  }
 }
 
 /**
  * Implements template_preprocess_block__system_menu_block().
  */
 function bluex_preprocess_block__system_menu_block(&$variables) {
-  // Obtener el nombre del sitio y pasarlo a la plantilla.
+  // Get site name.
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
 }

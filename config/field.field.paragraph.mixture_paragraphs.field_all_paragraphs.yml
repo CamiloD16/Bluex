@@ -1,0 +1,50 @@
+uuid: 12bdc22d-e858-4521-ad0f-b01bbd77278d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_all_paragraphs
+    - paragraphs.paragraphs_type.endorsement
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.mixture_paragraphs
+    - paragraphs.paragraphs_type.soft_banner
+  module:
+    - entity_reference_revisions
+id: paragraph.mixture_paragraphs.field_all_paragraphs
+field_name: field_all_paragraphs
+entity_type: paragraph
+bundle: mixture_paragraphs
+label: 'All paragraphs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      endorsement: endorsement
+      hero: hero
+      soft_banner: soft_banner
+    negate: 0
+    target_bundles_drag_drop:
+      cards_title_description:
+        weight: 8
+        enabled: false
+      carousel:
+        weight: 9
+        enabled: false
+      endorsement:
+        weight: 10
+        enabled: true
+      hero:
+        weight: 11
+        enabled: true
+      mixture_paragraphs:
+        weight: 7
+        enabled: false
+      soft_banner:
+        weight: 12
+        enabled: true
+field_type: entity_reference_revisions
