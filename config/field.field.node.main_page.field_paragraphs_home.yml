@@ -1,20 +1,21 @@
-uuid: 12bdc22d-e858-4521-ad0f-b01bbd77278d
+uuid: c7fbf377-3309-4c47-8de4-b52ab5b0893a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_all_paragraphs
+    - field.storage.node.field_paragraphs_home
+    - node.type.main_page
+    - paragraphs.paragraphs_type.duo_visual
     - paragraphs.paragraphs_type.endorsement
     - paragraphs.paragraphs_type.hero
-    - paragraphs.paragraphs_type.mixture_paragraphs
     - paragraphs.paragraphs_type.soft_banner
   module:
     - entity_reference_revisions
-id: paragraph.mixture_paragraphs.field_all_paragraphs
-field_name: field_all_paragraphs
-entity_type: paragraph
-bundle: mixture_paragraphs
-label: 'All paragraphs'
+id: node.main_page.field_paragraphs_home
+field_name: field_paragraphs_home
+entity_type: node
+bundle: main_page
+label: 'Paragraphs Home'
 description: ''
 required: false
 translatable: false
@@ -24,26 +25,27 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
+      duo_visual: duo_visual
       endorsement: endorsement
       hero: hero
       soft_banner: soft_banner
     negate: 0
     target_bundles_drag_drop:
       cards_title_description:
-        weight: 8
-        enabled: false
-      carousel:
-        weight: 9
-        enabled: false
-      endorsement:
-        weight: 10
-        enabled: true
-      hero:
-        weight: 11
-        enabled: true
-      mixture_paragraphs:
         weight: 7
         enabled: false
+      carousel:
+        weight: 8
+        enabled: false
+      duo_visual:
+        weight: 7
+        enabled: true
+      endorsement:
+        weight: 9
+        enabled: true
+      hero:
+        weight: 10
+        enabled: true
       soft_banner:
         weight: 12
         enabled: true

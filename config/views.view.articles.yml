@@ -218,9 +218,9 @@ display:
         type: full
         options:
           offset: 0
-          items_per_page: 12
+          items_per_page: 3
           total_pages: null
-          id: 0
+          id: 1
           tags:
             next: ››
             previous: ‹‹
@@ -230,7 +230,7 @@ display:
             items_per_page: false
             items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
+            items_per_page_options_all: true
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset

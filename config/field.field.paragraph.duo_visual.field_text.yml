@@ -1,0 +1,19 @@
+uuid: 5e5346a7-5539-4c29-8968-68c71e3bca58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.duo_visual
+id: paragraph.duo_visual.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: duo_visual
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
