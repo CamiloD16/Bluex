@@ -52,7 +52,7 @@
       <section class="{{ background_color }}">
         <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
 
-          {% if content.field_title %}
+          {% if content.field_title or content.field_text %}
             <div class="font-light sm:text-lg {{ text_color }}">
               {% if content.field_title %}
                 <h2 class="mb-4 text-4xl md:text-5xl xl:text-6xl tracking-tight font-extrabold">{{ content.field_title }}</h2>
