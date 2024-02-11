@@ -1,0 +1,23 @@
+uuid: 83a221c1-0ac1-4680-bc94-282150e592ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.duo_visual
+id: paragraph.duo_visual.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: duo_visual
+label: 'Background color'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Black
+  off_label: White
+field_type: boolean

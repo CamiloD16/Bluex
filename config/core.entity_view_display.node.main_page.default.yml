@@ -3,14 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.main_page.field_all_paragraphs
+    - field.field.node.main_page.field_paragraphs_home
     - node.type.main_page
     - views.view.articles
   content:
     - 'block_content:carousel:d2b5ea28-1ac8-4ffd-aa73-5ebee5163ea1'
   module:
     - block_content
-    - entity_reference_revisions
     - layout_builder
     - layout_discovery
     - user
@@ -40,12 +39,19 @@ third_party_settings:
               context_mapping: {  }
             weight: 0
             additional: {  }
-          6634078c-76f7-4d88-b657-9a6b31a63029:
-            uuid: 6634078c-76f7-4d88-b657-9a6b31a63029
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Section 02'
+          context_mapping: {  }
+        components:
+          60787eda-7470-4e17-b85e-10018cb89047:
+            uuid: 60787eda-7470-4e17-b85e-10018cb89047
             region: content
             configuration:
-              id: 'field_block:node:main_page:field_all_paragraphs'
-              label: 'All paragraphs'
+              id: 'field_block:node:main_page:field_paragraphs_home'
+              label: 'Paragraphs Home'
               label_display: '0'
               provider: layout_builder
               context_mapping:
@@ -57,15 +63,8 @@ third_party_settings:
                 settings:
                   view_mode: default
                 third_party_settings: {  }
-            weight: 1
+            weight: 0
             additional: {  }
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: 'Section 02'
-          context_mapping: {  }
-        components: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -102,4 +101,5 @@ content:
     weight: 3
     region: content
 hidden:
+  field_paragraphs_home: true
   links: true

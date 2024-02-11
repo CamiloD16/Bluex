@@ -120,19 +120,39 @@ function bluex_preprocess_paragraph(array &$variables): void {
   if ($paragraph->getType() == 'carousel') {
     // Get the image URL and the alt text.
     if (!empty($paragraph->field_image_media->entity)) {
-      // Reemplaza 'field_media_image' con el nombre de tu campo de imagen en la entidad de medios.
       $image_entity = $paragraph->field_image_media->entity->get('field_media_image')->entity;
 
-      // Verifica si hay una imagen asociada.
       if ($image_entity) {
-        // Obtiene el servicio 'file_url_generator'.
         $file_url_generator = \Drupal::service('file_url_generator');
-
-        // Obtiene la URL de la imagen.
         $image_url = $file_url_generator->generateAbsoluteString($image_entity->getFileUri());
         $alt_text = $paragraph->field_image_media->alt;
         $variables['image_url'] = $image_url;
         $variables['alt_text'] = $alt_text;
+      }
+    }
+  }
+
+  if ($paragraph->getType() == 'duo_visual') {
+    // Change the background color.
+    $background_color = setBackgroundColor($paragraph, 'field_background_color');
+    $variables['background_color'] = $background_color[0];
+    $variables['text_color'] = $background_color[1];
+
+    // Get the images attached to the field_image field.
+    if (!empty($paragraph->field_image->getValue())) {
+      $images = $paragraph->field_image->referencedEntities();
+
+      foreach ($images as $key => $image_entity) {
+        // Check if the necessary properties exist before accessing them.
+        if (!empty($image_entity->field_media_image->entity)) {
+          // Get the image URI and generate the URL.
+          $image_uri = $image_entity->field_media_image->entity->getFileUri();
+          $image_url = \Drupal::service('file_url_generator')->generateAbsoluteString($image_uri);
+          $alt_text = $image_entity->field_media_image->alt;
+
+          $variables['image_url_' . ($key + 1)] = $image_url;
+          $variables['alt_text_' . ($key + 1)] = $alt_text;
+        }
       }
     }
   }

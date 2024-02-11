@@ -1,4 +1,4 @@
-uuid: 17467261-bfcf-4485-9f34-181b6d228498
+uuid: 866078af-41cc-4cd7-ab08-2a208e43b20a
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ entity_type: paragraph
 bundle: cards_title_description
 label: 'Short title'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

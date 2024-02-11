@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.main_page.field_all_paragraphs
+    - field.field.node.main_page.field_paragraphs_home
     - node.type.main_page
   module:
     - user
@@ -19,4 +19,4 @@ content:
     weight: 100
     region: content
 hidden:
-  field_all_paragraphs: true
+  field_paragraphs_home: true

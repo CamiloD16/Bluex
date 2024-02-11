@@ -42,7 +42,6 @@ third_party_settings:
         - field_title
         - field_description
         - field_image_media
-        - field_image
       label: Content
       region: content
       parent_name: group_tabs
