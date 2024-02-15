@@ -57,16 +57,14 @@
 
           {% if image_position == 0 %}
             <div class="hidden mr-8 lg:mt-0 lg:col-span-5 lg:flex">
-              <img class="h-96 w-full" src="{{ image_url }}" alt={{ alt_text }}>
+              <img class="h-96 w-full rounded-lg" src="{{ image_url }}" alt={{ alt_text }}>
             </div>
           {% endif %}
 
-          <div class="mr-auto px-4 sm:pr-7 place-self-center lg:col-span-7">
+          <div class="mr-auto px-4 sm:pr-7 place-self-center lg:col-span-7 {{ text_color }}">
 
             {% if content.field_title  %}
-              <h2 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl {{ text_color }}">
-                {{ content.field_title }}
-              </h2>
+              {{ content.field_title }}
             {% endif %}
 
             {% if content.field_description %}
@@ -89,7 +87,7 @@
 
           {% if image_position == 1 %}
             <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-              <img class="h-96 w-full" src="{{ image_url }}" alt={{ alt_text }}>
+              <img class="h-96 w-full rounded-lg" src="{{ image_url }}" alt={{ alt_text }}>
             </div>
           {% endif %}
 
