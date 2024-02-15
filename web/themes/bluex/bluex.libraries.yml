@@ -2,6 +2,7 @@
 articles:
   js:
     js/bluex.js: {}
+    js/articleViewClick.js: {}
   css:
     theme:
       css/globals.css: {}
