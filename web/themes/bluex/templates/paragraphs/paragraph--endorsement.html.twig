@@ -61,7 +61,7 @@
                 </h2>
               {% endif %}
               {% if content.field_description %}
-                <div class="mb-8 text-lg font-normal lg:text-xl text-gray-600">
+                <div class="mb-8 text-lg font-normal lg:text-xl text-gray-500">
                   {{ content.field_description }}
                 </div>
               {% endif %}
@@ -75,7 +75,7 @@
           {% endif %}
 
           {% if content.field_button|render %}
-            <button class="flex mx-auto mt-16 text-white bg-blue-700  border-0 py-2 px-8 focus:outline-none hover:bg-blue-800 rounded text-lg">
+            <button class="flex mx-auto mt-2 text-white bg-blue-700  border-0 py-2 px-8 focus:outline-none hover:bg-blue-800 rounded text-lg">
               {{ content.field_button }}
             </button>
           {% endif %}
