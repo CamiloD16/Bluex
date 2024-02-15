@@ -52,6 +52,19 @@
       <section class="{{ background_color }}">
         <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
 
+          {% if image_position == 0 %}
+            {% if image_url_1 or image_url_2 %}
+              <div class="grid grid-cols-2 gap-4 mt-8">
+                {% if image_url_1 %}
+                  <img style="height:420px" class="w-full rounded-lg" src="{{ image_url_1 }}" alt="{{ alt_text_1 }}">
+                {% endif %}
+                {% if image_url_2 %}
+                  <img style="height:420px" class="mt-4 w-full lg:mt-10 rounded-lg" src="{{ image_url_2 }}" alt="{{ alt_text_2 }}">
+                {% endif %}
+              </div>
+            {% endif %}
+          {% endif %}
+
           {% if content.field_title or content.field_text %}
             <div class="font-light sm:text-lg {{ text_color }}">
               {% if content.field_title %}
@@ -63,15 +76,17 @@
             </div>
           {% endif %}
 
-          {% if image_url_1 or image_url_2 %}
-            <div class="grid grid-cols-2 gap-4 mt-8">
-              {% if image_url_1 %}
-                <img class="w-full rounded-lg" src="{{ image_url_1 }}" alt="{{ alt_text_1 }}">
-              {% endif %}
-              {% if image_url_2 %}
-                <img class="mt-4 w-full lg:mt-10 rounded-lg" src="{{ image_url_2 }}" alt="{{ alt_text_2 }}">
-              {% endif %}
-            </div>
+          {% if image_position == 1 %}
+            {% if image_url_1 or image_url_2 %}
+              <div class="grid grid-cols-2 gap-4 mt-8">
+                {% if image_url_1 %}
+                  <img style="height:420px" class="w-full rounded-lg" src="{{ image_url_1 }}" alt="{{ alt_text_1 }}">
+                {% endif %}
+                {% if image_url_2 %}
+                  <img style="height:420px" class="mt-4 w-full lg:mt-10 rounded-lg" src="{{ image_url_2 }}" alt="{{ alt_text_2 }}">
+                {% endif %}
+              </div>
+            {% endif %}
           {% endif %}
 
         </div>

@@ -138,6 +138,10 @@ function bluex_preprocess_paragraph(array &$variables): void {
     $variables['background_color'] = $background_color[0];
     $variables['text_color'] = $background_color[1];
 
+    // Change the position image.
+    $position_image_value = $paragraph->field_controller_position->value;
+    $variables['image_position'] = $position_image_value;
+
     // Get the images attached to the field_image field.
     if (!empty($paragraph->field_image->getValue())) {
       $images = $paragraph->field_image->referencedEntities();
