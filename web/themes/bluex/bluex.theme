@@ -1,9 +1,9 @@
 <?php declare(strict_types = 1);
 
-use Drupal\file\Entity\File;
 use Drupal\Core\Url;
-use Drupal\media\Entity\Media;
+use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
+use Drupal\media\Entity\Media;
 use Drupal\media_entity\MediaInterface;
 use Drupal\node\Entity\Node;
 
@@ -56,10 +56,11 @@ function bluex_preprocess_node(array &$variables): void {
  *   The paragraph entity.
  * @param string $field_name
  *   The name of the field to evaluate.
+ *
  * @return array
  *   An array containing background and text colors.
  */
-function setBackgroundColor($paragraph, $field_name) {
+function set_background_color($paragraph, $field_name) {
   $background_value = $paragraph->{$field_name}->value;
   return $background_value == 1 ? ['bg-gray-900', 'text-white'] : ['bg-white', 'text-black'];
 }
@@ -85,7 +86,7 @@ function bluex_preprocess_paragraph(array &$variables): void {
     }
 
     // Change the background color.
-    $background_color = setBackgroundColor($paragraph, 'field_background_color');
+    $background_color = set_background_color($paragraph, 'field_background_color');
     $variables['background_color'] = $background_color[0];
     $variables['text_color'] = $background_color[1];
 
@@ -105,14 +106,14 @@ function bluex_preprocess_paragraph(array &$variables): void {
 
   if ($paragraph->getType() == 'endorsement') {
     // Change the background color.
-    $background_color = setBackgroundColor($paragraph, 'field_background_color');
+    $background_color = set_background_color($paragraph, 'field_background_color');
     $variables['background_color'] = $background_color[0];
     $variables['text_color'] = $background_color[1];
   }
 
   if ($paragraph->getType() == 'soft_banner') {
     // Change the background color.
-    $background_color = setBackgroundColor($paragraph, 'field_background_color');
+    $background_color = set_background_color($paragraph, 'field_background_color');
     $variables['background_color'] = $background_color[0];
     $variables['text_color'] = $background_color[1];
   }
@@ -132,7 +133,7 @@ function bluex_preprocess_paragraph(array &$variables): void {
     }
 
     // Change the background color.
-    $background_color = setBackgroundColor($paragraph, 'field_background_color');
+    $background_color = set_background_color($paragraph, 'field_background_color');
     $variables['background_color'] = $background_color[0];
     $variables['text_color'] = $background_color[1];
   }
@@ -152,7 +153,7 @@ function bluex_preprocess_paragraph(array &$variables): void {
     }
 
     // Change the background color.
-    $background_color = setBackgroundColor($paragraph, 'field_background_color');
+    $background_color = set_background_color($paragraph, 'field_background_color');
     $variables['background_color'] = $background_color[0];
     $variables['text_color'] = $background_color[1];
   }
@@ -174,7 +175,7 @@ function bluex_preprocess_paragraph(array &$variables): void {
 
   if ($paragraph->getType() == 'duo_visual') {
     // Change the background color.
-    $background_color = setBackgroundColor($paragraph, 'field_background_color');
+    $background_color = set_background_color($paragraph, 'field_background_color');
     $variables['background_color'] = $background_color[0];
     $variables['text_color'] = $background_color[1];
 

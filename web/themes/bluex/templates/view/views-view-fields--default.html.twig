@@ -1,0 +1,23 @@
+{# Default fields for cards #}
+
+<div class="relative overflow-hidden rounded-lg bg-cover bg-no-repeat cursor-pointer shadow {% if article_style %}{{ article_style }}{% endif %}">
+  {% if fields.field_image.content %}
+    <img src="{{ fields.field_image.content|striptags|raw }}" class="w-full align-middle transition duration-300 ease-linear rounded-lg {% if image_style %}{{ image_style }}{% endif %}" />
+  {% endif %}
+
+  <div class="articleTextContainer absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.4)] bg-fixed" data-nid={{ row._entity.id }}>
+    <div class="flex h-full items-end justify-start">
+      <div class="m-6 text-white">
+
+        {% if fields.title.content %}
+          <h5 class="mb-3 text-lg font-bold">{{ fields.title.content }}</h5>
+        {% endif %}
+
+        {% if fields.field_short_description %}
+          <p>{{ fields.field_short_description.content }}</p>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>
