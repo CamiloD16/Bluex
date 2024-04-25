@@ -1,0 +1,52 @@
+uuid: 30e6b4c7-6b63-4215-ad70-7fd78a74052f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_alternative
+    - node.type.content_page
+    - paragraphs.paragraphs_type.header_alternative
+  module:
+    - entity_reference_revisions
+id: node.content_page.field_header_alternative
+field_name: field_header_alternative
+entity_type: node
+bundle: content_page
+label: 'Header alternative'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      header_alternative: header_alternative
+    negate: 0
+    target_bundles_drag_drop:
+      cards_title_description:
+        weight: 10
+        enabled: false
+      carousel:
+        weight: 11
+        enabled: false
+      duo_visual:
+        weight: 12
+        enabled: false
+      endorsement:
+        weight: 13
+        enabled: false
+      header_alternative:
+        weight: 9
+        enabled: true
+      hero:
+        weight: 14
+        enabled: false
+      image_with_mask:
+        weight: 15
+        enabled: false
+      soft_banner:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

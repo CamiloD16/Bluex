@@ -1,0 +1,14 @@
+uuid: 13045c7b-8edc-4b76-a573-237c1c2eefd9
+langcode: en
+status: true
+dependencies: {  }
+name: standard
+label: 'Standard (500x300)'
+effects:
+  fcf01dec-a285-4c42-b351-bf1dc2478716:
+    uuid: fcf01dec-a285-4c42-b351-bf1dc2478716
+    id: image_resize
+    weight: 1
+    data:
+      width: 500
+      height: 300

@@ -1,0 +1,51 @@
+uuid: f8611c1e-45a9-4ac1-9cb0-ca702c31aaa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.header_alternative.field_background_color
+    - field.field.paragraph.header_alternative.field_image_media
+    - field.field.paragraph.header_alternative.field_short_description
+    - field.field.paragraph.header_alternative.field_short_title
+    - paragraphs.paragraphs_type.header_alternative
+id: paragraph.header_alternative.default
+targetEntityType: paragraph
+bundle: header_alternative
+mode: default
+content:
+  field_background_color:
+    type: boolean
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_image_media:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_short_description:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_short_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

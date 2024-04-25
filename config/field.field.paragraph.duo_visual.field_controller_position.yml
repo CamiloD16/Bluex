@@ -1,0 +1,23 @@
+uuid: c95228be-5984-4676-bf39-665ad0b002ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_controller_position
+    - paragraphs.paragraphs_type.duo_visual
+id: paragraph.duo_visual.field_controller_position
+field_name: field_controller_position
+entity_type: paragraph
+bundle: duo_visual
+label: 'Controller position'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Image on right'
+  off_label: 'Image on left'
+field_type: boolean

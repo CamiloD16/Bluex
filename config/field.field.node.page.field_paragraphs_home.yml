@@ -1,0 +1,52 @@
+uuid: d418d460-689c-46ff-888b-4958b3ea13ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs_home
+    - node.type.page
+    - paragraphs.paragraphs_type.duo_visual
+    - paragraphs.paragraphs_type.endorsement
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.soft_banner
+  module:
+    - entity_reference_revisions
+id: node.page.field_paragraphs_home
+field_name: field_paragraphs_home
+entity_type: node
+bundle: page
+label: 'Paragraphs Home'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      duo_visual: duo_visual
+      endorsement: endorsement
+      hero: hero
+      soft_banner: soft_banner
+    negate: 0
+    target_bundles_drag_drop:
+      cards_title_description:
+        weight: 7
+        enabled: false
+      carousel:
+        weight: 8
+        enabled: false
+      duo_visual:
+        weight: 7
+        enabled: true
+      endorsement:
+        weight: 9
+        enabled: true
+      hero:
+        weight: 10
+        enabled: true
+      soft_banner:
+        weight: 12
+        enabled: true
+field_type: entity_reference_revisions

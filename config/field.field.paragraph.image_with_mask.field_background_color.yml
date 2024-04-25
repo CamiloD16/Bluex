@@ -1,0 +1,23 @@
+uuid: 10256de9-1b7f-489c-9199-39a8b3d972bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.image_with_mask
+id: paragraph.image_with_mask.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: image_with_mask
+label: 'Background color'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Black
+  off_label: White
+field_type: boolean

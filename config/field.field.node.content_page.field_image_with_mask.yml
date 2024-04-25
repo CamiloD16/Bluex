@@ -1,0 +1,49 @@
+uuid: 387cd7a4-5e81-45c0-a0cc-937deee2f315
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_with_mask
+    - node.type.content_page
+    - paragraphs.paragraphs_type.image_with_mask
+  module:
+    - entity_reference_revisions
+id: node.content_page.field_image_with_mask
+field_name: field_image_with_mask
+entity_type: node
+bundle: content_page
+label: 'image with mask'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      image_with_mask: image_with_mask
+    negate: 0
+    target_bundles_drag_drop:
+      cards_title_description:
+        weight: 8
+        enabled: false
+      carousel:
+        weight: 9
+        enabled: false
+      duo_visual:
+        weight: 10
+        enabled: false
+      endorsement:
+        weight: 11
+        enabled: false
+      hero:
+        weight: 12
+        enabled: false
+      image_with_mask:
+        weight: 13
+        enabled: true
+      soft_banner:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions
