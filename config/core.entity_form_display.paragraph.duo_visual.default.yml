@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.duo_visual.field_background_color
+    - field.field.paragraph.duo_visual.field_controller_position
     - field.field.paragraph.duo_visual.field_image
     - field.field.paragraph.duo_visual.field_text
     - field.field.paragraph.duo_visual.field_title
@@ -31,6 +32,7 @@ third_party_settings:
         width_breakpoint: 640
     group_configuration:
       children:
+        - field_controller_position
         - field_background_color
       label: Configuration
       region: content
@@ -68,7 +70,13 @@ mode: default
 content:
   field_background_color:
     type: options_buttons
-    weight: 1
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_controller_position:
+    type: options_buttons
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }

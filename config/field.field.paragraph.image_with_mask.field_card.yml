@@ -1,0 +1,49 @@
+uuid: 2ffcfb0b-2379-4dca-aeca-5ac16a2fbafb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card
+    - paragraphs.paragraphs_type.cards_title_description
+    - paragraphs.paragraphs_type.image_with_mask
+  module:
+    - entity_reference_revisions
+id: paragraph.image_with_mask.field_card
+field_name: field_card
+entity_type: paragraph
+bundle: image_with_mask
+label: Card
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      cards_title_description: cards_title_description
+    negate: 0
+    target_bundles_drag_drop:
+      cards_title_description:
+        weight: 5
+        enabled: true
+      carousel:
+        weight: 9
+        enabled: false
+      duo_visual:
+        weight: 10
+        enabled: false
+      endorsement:
+        weight: 6
+        enabled: false
+      hero:
+        weight: 7
+        enabled: false
+      image_with_mask:
+        weight: 13
+        enabled: false
+      soft_banner:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

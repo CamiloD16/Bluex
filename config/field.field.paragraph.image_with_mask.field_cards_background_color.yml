@@ -1,0 +1,23 @@
+uuid: 804b7ab2-8703-4a02-bfb6-414115ee8bf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cards_background_color
+    - paragraphs.paragraphs_type.image_with_mask
+id: paragraph.image_with_mask.field_cards_background_color
+field_name: field_cards_background_color
+entity_type: paragraph
+bundle: image_with_mask
+label: 'Cards background color'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Black
+  off_label: White
+field_type: boolean

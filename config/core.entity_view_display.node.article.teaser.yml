@@ -57,3 +57,4 @@ hidden:
   field_short_description: true
   field_tags: true
   field_time: true
+  langcode: true

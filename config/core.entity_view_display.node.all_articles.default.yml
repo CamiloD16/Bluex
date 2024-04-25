@@ -1,0 +1,172 @@
+uuid: 29665577-d6c4-4f32-9d43-3be6202e608c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.all_articles
+    - views.view.articles_2_horizontal
+    - views.view.articles_2_vertical
+    - views.view.articles_4_horizontal
+    - views.view.big_article
+    - views.view.main_article
+    - views.view.mini_articles
+    - views.view.others_articles
+  module:
+    - layout_builder
+    - layout_discovery
+    - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          9871ce96-f2e4-4790-bd09-08aed5b83c78:
+            uuid: 9871ce96-f2e4-4790-bd09-08aed5b83c78
+            region: content
+            configuration:
+              id: 'extra_field_block:node:all_articles:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          74d992db-e5c1-4132-be02-bc3c3baf377b:
+            uuid: 74d992db-e5c1-4132-be02-bc3c3baf377b
+            region: content
+            configuration:
+              id: 'views_block:articles_4_horizontal-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 75-25
+        components:
+          3dee2089-fd86-4b72-a809-9ea45ff46d06:
+            uuid: 3dee2089-fd86-4b72-a809-9ea45ff46d06
+            region: first
+            configuration:
+              id: 'views_block:big_article-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+          21d02754-aae8-4065-b156-cc21c9c7ee21:
+            uuid: 21d02754-aae8-4065-b156-cc21c9c7ee21
+            region: second
+            configuration:
+              id: 'views_block:articles_2_vertical-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 25-50-25
+        components:
+          209e5112-4fbb-4e08-a050-ae4910fdfbf3:
+            uuid: 209e5112-4fbb-4e08-a050-ae4910fdfbf3
+            region: first
+            configuration:
+              id: 'views_block:mini_articles-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: '1'
+            weight: 0
+            additional: {  }
+          62bc5db8-f042-4e22-b69f-689350fe5ea9:
+            uuid: 62bc5db8-f042-4e22-b69f-689350fe5ea9
+            region: second
+            configuration:
+              id: 'views_block:main_article-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: '1'
+            weight: 0
+            additional: {  }
+          e9551cda-9d6b-4b3d-af10-168eeb26ad93:
+            uuid: e9551cda-9d6b-4b3d-af10-168eeb26ad93
+            region: third
+            configuration:
+              id: 'views_block:others_articles-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: '1'
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          0d2eeb92-b16a-4b24-8442-e94c9a9210ad:
+            uuid: 0d2eeb92-b16a-4b24-8442-e94c9a9210ad
+            region: content
+            configuration:
+              id: 'views_block:articles_2_horizontal-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.all_articles.default
+targetEntityType: node
+bundle: all_articles
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

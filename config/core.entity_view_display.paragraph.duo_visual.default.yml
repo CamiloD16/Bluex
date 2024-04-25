@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.duo_visual.field_background_color
+    - field.field.paragraph.duo_visual.field_controller_position
     - field.field.paragraph.duo_visual.field_image
     - field.field.paragraph.duo_visual.field_text
     - field.field.paragraph.duo_visual.field_title
@@ -22,6 +23,16 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_controller_position:
+    type: boolean
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_image:
     type: entity_reference_entity_view

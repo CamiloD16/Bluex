@@ -1,0 +1,19 @@
+uuid: f4f83940-f00f-4fbd-91bf-c3ec35139856
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_short_description
+    - paragraphs.paragraphs_type.header_alternative
+id: paragraph.header_alternative.field_short_description
+field_name: field_short_description
+entity_type: paragraph
+bundle: header_alternative
+label: 'Short description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
