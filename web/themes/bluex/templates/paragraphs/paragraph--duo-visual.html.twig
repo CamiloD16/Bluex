@@ -50,16 +50,16 @@
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
       <section class="{{ background_color }}">
-        <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+        <div class="gap-16 items-center py-8 px-4 sm:w-4/5 sm:mx-auto lg:w-full lg:max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
 
           {% if image_position == 0 %}
             {% if image_url_1 or image_url_2 %}
-              <div class="grid grid-cols-2 gap-4 mt-8">
+              <div class="grid grid-cols-2 gap-4 mt-8 mb-4 lg:mb-0">
                 {% if image_url_1 %}
-                  <img style="height:420px" class="w-full rounded-lg" src="{{ image_url_1 }}" alt="{{ alt_text_1 }}">
+                  <img class="w-44 sm:w-full h-60	sm:h-104 rounded-lg" src="{{ image_url_1 }}" alt="{{ alt_text_1 }}">
                 {% endif %}
                 {% if image_url_2 %}
-                  <img style="height:420px" class="mt-4 w-full lg:mt-10 rounded-lg" src="{{ image_url_2 }}" alt="{{ alt_text_2 }}">
+                  <img class="w-44 sm:w-full h-60	sm:h-104 lg:mt-10 rounded-lg" src="{{ image_url_2 }}" alt="{{ alt_text_2 }}">
                 {% endif %}
               </div>
             {% endif %}
@@ -78,12 +78,12 @@
 
           {% if image_position == 1 %}
             {% if image_url_1 or image_url_2 %}
-              <div class="grid grid-cols-2 gap-4 mt-8">
+              <div class="grid grid-cols-2 gap-4 mt-8 mb-4 lg:mb-0">
                 {% if image_url_1 %}
-                  <img style="height:420px" class="w-full rounded-lg" src="{{ image_url_1 }}" alt="{{ alt_text_1 }}">
+                  <img class="w-44 sm:w-full h-60	sm:h-104 rounded-lg" src="{{ image_url_1 }}" alt="{{ alt_text_1 }}">
                 {% endif %}
                 {% if image_url_2 %}
-                  <img style="height:420px" class="mt-4 w-full lg:mt-10 rounded-lg" src="{{ image_url_2 }}" alt="{{ alt_text_2 }}">
+                  <img class="w-44 sm:w-full h-60	sm:h-104 lg:mt-10 rounded-lg" src="{{ image_url_2 }}" alt="{{ alt_text_2 }}">
                 {% endif %}
               </div>
             {% endif %}

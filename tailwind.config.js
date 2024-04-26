@@ -4,7 +4,16 @@ module.exports = {
     "./web/themes/bluex/templates/**/*.twig",
   ],
   theme: {
-    extend: {},
+    extend: {
+      height: {
+        "104":"26rem",
+        "128":"32rem",
+      },
+      minHeight: {
+        "104":"26rem",
+        "128": '32rem',
+      },
+    },
   },
   plugins: [],
 }

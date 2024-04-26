@@ -1,3 +1,5 @@
+// Redirect the user to the article when the user clicks on the image.
+
 (function ($, Drupal, drupalSettings) {
   Drupal.behaviors.articleClick = {
     attach: function (context, settings) {
@@ -6,7 +8,7 @@
         var nodeId = $(this).closest('[data-nid]').data('nid');
 
         if (nodeId) {
-          var contentUrl = `node/${nodeId}`
+          var contentUrl = `${nodeId}`
           window.location.href = contentUrl;
         }
       });

@@ -49,8 +49,8 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      <div style="height:35rem;">
-        <img style="min-height:35rem;" class="w-full" src="{{ image_url }}"  alt="{{ alt_text }}">
+      <div class="h-64 sm:h-80 md:h-128">
+        <img class="min-h-64 sm:min-h-80 md:min-h-128 w-full" src="{{ image_url }}"  alt="{{ alt_text }}">
       </div>
     {% endblock %}
   </div>
