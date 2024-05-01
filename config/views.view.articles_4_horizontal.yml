@@ -262,16 +262,13 @@ display:
           value:
             article: article
       style:
-        type: grid
+        type: grid_responsive
         options:
           grouping: {  }
           columns: 4
-          automatic_width: true
+          cell_min_width: 270
+          grid_gutter: 12
           alignment: horizontal
-          row_class_custom: ''
-          row_class_default: true
-          col_class_custom: p-2
-          col_class_default: true
       row:
         type: fields
       query:
@@ -283,6 +280,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      css_class: p-2
       header: {  }
       footer: {  }
       display_extenders: {  }
