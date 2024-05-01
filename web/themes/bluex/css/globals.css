@@ -16,8 +16,23 @@ a:hover{
   margin-top: 0;
 }
 
+
 /* Only to Develoment mode */
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+
+/* Extra Tailwind */
+.sm\:h-104 {
+  height: 26rem;
+}
+
+.md\:h-128 {
+  height: 32rem;
+}
+
+.md\:min-h-128 {
+  min-height: 32rem;
 }
