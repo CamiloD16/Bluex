@@ -8,7 +8,7 @@
         var nodeId = $(this).closest('[data-nid]').data('nid');
 
         if (nodeId) {
-          var contentUrl = `${nodeId}`
+          var contentUrl = `node/${nodeId}`
           window.location.href = contentUrl;
         }
       });
