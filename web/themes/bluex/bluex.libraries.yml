@@ -3,6 +3,10 @@ articles:
   js:
     js/bluex.js: {}
     js/articleViewClick.js: {}
+    js/openCloseNavbar.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
   css:
     theme:
       css/globals.css: {}

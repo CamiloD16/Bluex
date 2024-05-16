@@ -2,16 +2,28 @@
  * @file
  * bluex behaviors.
  */
-(function (Drupal) {
+(function ($, Drupal, drupalSettings) {
 
   'use strict';
 
   Drupal.behaviors.bluex = {
-    attach (context, settings) {
+    attach: function (context, settings) {
+      // This code open or close the main navbar.
+      $('.btn-navbar', context).off('click').on('click', function () {
+        var $navbarContent = $('.navbar-block-content', context);
 
-      console.log('It works!');
+        if ($(window).width() > 768) {
+          $navbarContent.css('display', 'none');
+        }
 
+        if ($navbarContent.css('display') === 'none') {
+          $navbarContent.css('display', 'block');
+        } else {
+          $navbarContent.css('display', 'none');
+        }
+
+      });
     }
   };
 
-} (Drupal));
+}(jQuery, Drupal, drupalSettings));
