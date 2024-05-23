@@ -25,6 +25,10 @@ a:hover{
 
 
 /* Extra Tailwind */
+h-128 {
+  height: 32rem;
+}
+
 .sm\:h-104 {
   height: 26rem;
 }
