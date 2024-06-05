@@ -5,6 +5,7 @@ articles:
     js/articleViewClick.js: {}
     js/openCloseNavbar.js: {}
   dependencies:
+    - core/drupal
     - core/jquery
     - core/jquery.once
   css:
